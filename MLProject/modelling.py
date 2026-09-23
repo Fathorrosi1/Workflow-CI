@@ -106,8 +106,7 @@ def main():
         mlflow.sklearn.log_model(
             sk_model=model,
             artifact_path='model',
-            serialization_format='pickle',
-            skops_trusted_types=['sklearn.tree._tree.Tree']
+            serialization_format='pickle'
         )
         
         print("Training selesai!")
