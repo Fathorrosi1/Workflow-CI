@@ -1,0 +1,11 @@
+name: telco-churn-project
+
+conda_env: conda.yaml
+
+entry_points:
+  main:
+    parameters:
+      data: {type: path, default: "namadataset_preprocessing/telco_churn_preprocessing.csv"}
+      n_estimators: {type: int, default: 100}
+      max_depth: {type: int, default: 10}
+    command: "python modelling.py --data {data} --n_estimators {n_estimators} --max_depth {max_depth}"
